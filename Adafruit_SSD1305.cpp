@@ -194,7 +194,7 @@ void Adafruit_SSD1305::begin(uint8_t i2caddr) {
   command(0x32);
   command(SSD1305_SETBRIGHTNESS);                 // 0x82
   command(0x80);
-  command(SSD1305_SEGREMAP | 0x01);
+  command(SSD1305_SEGREMAP | 0x00);
   command(SSD1305_NORMALDISPLAY);                 // 0xA6
   command(SSD1305_SETMULTIPLEX);                  // 0xA8
   command(0x3F); // 1/64
@@ -204,7 +204,7 @@ void Adafruit_SSD1305::begin(uint8_t i2caddr) {
   command(SSD1305_SETDISPLAYOFFSET);              // 0xD3
   command(0x40); 
   command(SSD1305_SETDISPLAYCLOCKDIV);            // 0xD5
-  command(0xf0); 
+  command(0xF0); 
   command(SSD1305_SETAREACOLOR);  
   command(0x05);
   command(SSD1305_SETPRECHARGE);                  // 0xd9
@@ -241,7 +241,7 @@ void Adafruit_SSD1305::begin(uint8_t i2caddr) {
   command(SSD1305_SETDISPLAYOFFSET);              // 0xD3
   command(0x40); 
   command(SSD1305_SETDISPLAYCLOCKDIV);            // 0xD5
-  command(0xf0); 
+  command(0xF0); 
   command(SSD1305_SETAREACOLOR);  
   command(0x05);
   command(SSD1305_SETPRECHARGE);                  // 0xd9
